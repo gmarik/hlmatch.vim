@@ -15,7 +15,7 @@ endf
 " Highlight string
 func! s:hl(str)
   let @/ = '\V'.a:str 
-  setlocal hls
+  set hls
   return a:str
 endf
 
