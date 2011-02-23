@@ -25,7 +25,7 @@ function! s:grep(str)
   copen
 endfunction
 
-comm! HlSelCword      call s:hl(s:ncword())
-comm! HlSelVSel       call s:hl(s:vsel())
-comm! HlSelGrepCword  call s:grep(s:hl(s:ncword()))
-comm! HlSelGrepVSel   call s:grep(s:hl(s:vsel()))
+comm! HlmCword      call s:hl(s:ncword())
+comm! HlmVSel       call s:hl(s:vsel())
+comm! HlmGrepCword  call s:grep(s:hl(s:ncword()))
+comm! HlmGrepVSel   call s:grep(s:hl(s:vsel()))
