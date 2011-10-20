@@ -36,3 +36,14 @@ comm! HlmCword      call s:hl('\<'.s:ncword().'\>')
 comm! HlmVSel       call s:hl('\<'.s:vsel().'\>')
 comm! HlmGrepCword  call s:grep(s:hl('\<'.s:ncword().'\>'))
 comm! HlmGrepVSel   call s:grep(s:hl('\<'.s:vsel().'\>'))
+
+" Mapping example
+" nnoremap # :<C-u>HlmCword<CR>
+" nnoremap <leader># :<C-u>HlmGrepCword<CR>
+" vnoremap # :<C-u>HlmVSel<CR>
+" vnoremap <leader># :<C-u>HlmGrepVSel<CR>
+" 
+" nnoremap ## :<C-u>HlmPartCword<CR>
+" nnoremap <leader>## :<C-u>HlmPartGrepCword<CR>
+" vnoremap ## :<C-u>HlmPartVSel<CR>
+" vnoremap <leader>## :<C-u>HlmPartGrepVSel<CR>
