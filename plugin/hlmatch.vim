@@ -25,7 +25,14 @@ function! s:grep(str)
   copen
 endfunction
 
-comm! HlmCword      call s:hl(s:ncword())
-comm! HlmVSel       call s:hl(s:vsel())
-comm! HlmGrepCword  call s:grep(s:hl(s:ncword()))
-comm! HlmGrepVSel   call s:grep(s:hl(s:vsel()))
+" partial(substring) match
+comm! HlmPartCword      call s:hl(s:ncword())
+comm! HlmPartVSel       call s:hl(s:vsel())
+comm! HlmPartGrepCword  call s:grep(s:hl(s:ncword()))
+comm! HlmPartGrepVSel   call s:grep(s:hl(s:vsel()))
+
+" exclusive match
+comm! HlmCword      call s:hl('\<'.s:ncword().'\>')
+comm! HlmVSel       call s:hl('\<'.s:vsel().'\>')
+comm! HlmGrepCword  call s:grep(s:hl('\<'.s:ncword().'\>'))
+comm! HlmGrepVSel   call s:grep(s:hl('\<'.s:vsel().'\>'))
