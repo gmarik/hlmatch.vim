@@ -21,7 +21,7 @@ endf
 
 function! s:grep(str)
   let search = substitute(a:str, '\n', '\\n', 'g')
-  execute 'noautocmd vimgrep /'.a:str.'/ **'
+  execute 'noautocmd grep -R '.shellescape(a:str).' '.getcwd()
   copen
 endfunction
 
