@@ -15,7 +15,8 @@ endf
 " Highlight string
 func! s:hl(str)
   let @/ = '\V'.a:str 
-  set hls
+  setl hls
+  exec '%s///gn' " prints out number of matches
   return a:str
 endf
 
@@ -23,7 +24,7 @@ function! s:grep(str)
   let search = substitute(a:str, '\n', '\\n', 'g')
   execute 'noautocmd grep -R '.shellescape(a:str).' '.getcwd()
   copen
-endfunction
+endf
 
 " partial(substring) match
 comm! HlmPartCword      call s:hl(s:ncword())
