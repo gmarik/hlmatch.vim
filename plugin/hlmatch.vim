@@ -16,7 +16,8 @@ endf
 func! s:hl(str)
   let @/ = '\V'.a:str 
   setl hls
-  exec '%s///gn' " prints out number of matches
+  " prints out number of matches
+  exec '%s///gn'
   return a:str
 endf
 
