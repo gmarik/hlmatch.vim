@@ -18,6 +18,8 @@ func! s:hl(str)
   setl hls
   " prints out number of matches
   exec '%s///gn'
+  " move cursor to the match
+  norm! n
   return a:str
 endf
 
