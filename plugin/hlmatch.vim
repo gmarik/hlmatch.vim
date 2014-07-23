@@ -19,7 +19,7 @@ func! s:hl(str)
   " prints out number of matches
   exec '%s///gn'
   " move cursor to the match
-  norm! n
+  silent norm! n
   return a:str
 endf
 
